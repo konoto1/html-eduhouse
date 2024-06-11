@@ -1,0 +1,25 @@
+    * {
+        box-sizing: border-box;
+    } 
+    body {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+    }
+
+    aside {
+        background-color: aqua;
+        width: 200px;
+        padding: 20px;
+        float: left;
+        height: 500px;
+        border: 10px solid red; /* negali buti % */
+    }
+
+    main, div {
+        background-color: bisque;
+        width: calc((100% - 200px) / 2);
+        float: left;
+        height: 500px;
+    }
+    
