@@ -1,15 +1,74 @@
     * {
         box-sizing: border-box;
-    } 
+    }
+
     body {
-        display: grid;
+        display:grid;
         grid-template-columns: 220px 1fr;
         margin: 0;
         min-height: 100vh;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "header header header header"
+            "progress progress progress subscription"
+            "popular mentors mentors mentors";
+        align-items: start;
+        background-color: white;
+        gap: 20px;
+        align-content: start;
+        padding: 20px 30px;
+    }
 
+    main .course-progress {
+        grid-area: progress;
+    }
+
+    main .subscription {
+        grid-area: subscription;
+    }
+
+    main .popular-categories {
+        grid-area: popular;
+    }
+
+    main .top-mentors {
+        grid-area: mentors;
+    }
+
+    main .block {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+
+    main .block.block-bg { 
+        padding: 20px;
+        background-color: #eefcef;
+        border-radius: 30px;
+
+    }
+/* .block.block-bg turi tureti abu pavadinimus klaseje eiliskumas nesvarbu */
+    main .block > .title {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    main .block > .link {
+        font-size: 14px;
+        justify-self: end;
+        align-self: center;
+        text-decoration: none;
+        color: #333;
+    }
+
+    main .block > .content {
+        grid-column: span 2;
+    }
     
     /* border negali buti % */
     /* display:flex ant teviniio elemento visi statomi i viena eile */
