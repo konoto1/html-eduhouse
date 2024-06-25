@@ -90,11 +90,20 @@
     position: relative;
     width: 40%;
     height: 100%;
-    background-color: var(--color1);
+    /* background-color: var(--color1); */
     border-radius: inherit;
 }
 
-.progress-bar .bar::after {
+.progress-bar .visible {
+    position: relative;
+    height: 100%;
+    background-color: var(--color1);
+    border-radius: inherit;
+    animation-name: loading;
+    animation-duration: 3s;
+}
+
+.progress-bar .visible::after {
     display: block;
     content: '';
     width: 10px;
@@ -111,4 +120,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
